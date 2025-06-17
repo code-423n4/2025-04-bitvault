@@ -1,0 +1,458 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / bitvault-apr
+==============================================================
+
+[04/01/2025 13:42] kartoonjoy (pinned)
+👋 Hello and welcome to the **$15,000 in USDC BitVault** audit channel!
+
+📆 Audit opens 04/02/2025 20:00 (20:00 UTC) and runs through 04/11/2025 20:00 (20:00 UTC) (9 days).
+
+Please give a warm welcome to the BitVault team, particularly @RedVeil, who will be available for questions either here in the channel or via a PRIVATE thread in the CET timezone(s). 
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try, by tagging `@Docs Wolf` in any thread (private or public) and asking your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources. *Docs Wolf will be available when the audit is live.*
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: <https://code4rena.com/audits/2025-04-bitvault>
+
+
+[04/01/2025 13:42] kartoonjoy
+Pinned a message.
+
+
+[04/01/2025 13:42] kartoonjoy
+ℹ️ Please no questions or comments in this channel for now.
+
+
+[04/02/2025 20:01] 0xbyteknight
+Have a nice hunt everyone! 😄
+
+
+[04/02/2025 20:03] kyosi2963
+10k reward pool for 3200 nloc, that's beautiful 😄
+
+{Reactions}
+😢 (5) 😂 (7) 
+
+[04/02/2025 20:09] derastephh
+It's really a 3200 nloc...that's wild
+
+
+[04/02/2025 20:10] derastephh
+Link to docs
+
+
+[04/02/2025 20:11] kartoonjoy
+Have you checked the repo?
+
+
+[04/02/2025 20:11] flexthree
+what is bitvault all about, what is its model and users @Docs Wolf
+
+
+[04/02/2025 20:13] kartoonjoy
+In a thread
+
+{Reactions}
+👍🏽 
+
+[04/02/2025 20:17] derastephh
+Yeah...Readme-sponsor.md
+
+{Reactions}
+👍 (2) 
+
+[04/02/2025 20:19] derastephh
+But 3k nsloc is wild
+
+
+[04/02/2025 20:19] derastephh
+More learning opportunity though
+
+{Reactions}
+😂 
+
+[04/02/2025 21:41] magiccentaur
+And only 9 days...🤨
+
+
+[04/02/2025 21:41] 0xbyteknight
+Come on guys, consider it as opportunity to learn! 🙂
+
+{Reactions}
+❤️ (6) 💯 (3) 
+
+[04/03/2025 13:07] 0xlaffitte
+Hey I'm new, why it's showing
+"did not match any file known to git"
+When i run forge install
+
+
+[04/03/2025 13:07] 0xredveil
+did you run the command in the contracts subfolder?
+
+
+[04/03/2025 13:11] 0xlaffitte
+Oh thanks it's working
+
+{Reactions}
+👍 
+
+[04/03/2025 14:12] ivanfitro
+yes this would be good
+
+
+[04/03/2025 15:28] sulaimon3546
+Please anyone able to run forge coverage without any issue been trying stuck at point with no error message
+
+
+[04/03/2025 15:35] 0xredveil
+What's the issue?
+
+
+[04/03/2025 15:36] sulaimon3546
+Can't run forge coverage just stuck with no error message
+
+
+[04/03/2025 15:41] 0xredveil
+Mhmm didn't encounter that yet. What's your forge version?
+
+
+[04/03/2025 15:47] sulaimon3546
+forge Version: 1.0.0-stable
+
+
+[04/03/2025 15:50] pfapostol
+Do you see at least some test logs?
+
+
+[04/03/2025 15:51] pfapostol
+What is the last message before stuck?
+
+
+[04/03/2025 15:51] sulaimon3546
+Yes, i did. i think the issue has to do with invariant test i would look at it
+
+
+[04/03/2025 15:52] pfapostol
+If the tests are running, the problem may be that they are simply taking too long.
+
+
+[04/03/2025 15:52] pfapostol
+It is defenitly long for me on 5700x
+
+
+[04/03/2025 16:01] pfapostol
+took 6 minutes, `forge coverage --ffi --report lcov --lcov-version 2.2  1965.59s user 5.04s system 525% cpu 6:14.85 total`
+
+
+[04/03/2025 16:25] 0xredveil
+Probably the invariant tests
+
+
+[04/03/2025 16:36] sulaimon3546
+Yes its
+
+
+[04/04/2025 04:17] w33ked_
+You know it doesn't run on the gpu. Maybe you can boost cpu usage or optimize wsl performance
+
+
+[04/04/2025 04:18] pfapostol
+5700X is ryzen CPU, and i do not use wsl, i have separate PC for audits
+
+
+[04/04/2025 04:27] pfapostol
+And in general, after running with the resource monitor, I realized that this is not a CPU problem. All threads are loaded by 2-6%. Invariants are simply slowing down for some reason.
+
+{Reactions}
+🔥 
+
+[04/04/2025 06:39] w33ked_
+Oooh. Sorry I confused the 5700x for the 5070
+
+
+[04/04/2025 14:46] kvarcheats
+i installed everything but when i try to forge build i get 1 million errors and then "Warning (4013): There are more than 256 errors. Aborting."
+
+
+[04/04/2025 16:13] rashmor01
+is code for PoC required?
+
+
+[04/04/2025 16:17] kartoonjoy
+they are recommended for HMs. 
+<https://docs.code4rena.com/roles/wardens/submission-guidelines#burden-of-proof>
+
+{Reactions}
+✅ 
+
+[04/04/2025 16:59] 0xredveil
+those warnings can be ignored they are in tests and scripts
+
+
+[04/04/2025 17:22] derastephh
+cd into contracts and then run forge build
+
+
+[04/04/2025 17:22] derastephh
+Damn this code is hard
+
+{Reactions}
+👍 
+
+[04/04/2025 17:22] derastephh
+Or too much
+
+
+[04/04/2025 17:23] 0xredveil
+its largely LiquityV2 which is genius but a beast
+
+
+[04/04/2025 17:23] 0xredveil
+if you understand that code ours istn much different but without prior knowledge of LiquityV2 its quite smth indeed
+
+
+[04/05/2025 11:34] theschnilch
+@RedVeil Is there any information about which collateral tokens will be used, apart from the ones that Liquity V2 uses by default (I mean wstETH, rETH, and wETH)? And will it be deployed only on mainnet, or also on other chains?
+
+
+[04/05/2025 12:33] 0xredveil
+Btc derivative like wbtc
+
+{Reactions}
+👍 
+
+[04/05/2025 13:50] theschnilch
+There's a Liquity V2 contest going on at the moment, and someone shared this video. It helped me understand the system a lot better, maybe it can help you too. https://www.youtube.com/watch?v=p9kKF-iHIVk
+
+{Reactions}
+🙏 (4) 
+
+[04/06/2025 09:18] 0x15_eth
+Yh wondering how the judging will go....will they wait for liquity contest to end or judge immediately?
+
+
+[04/06/2025 09:58] kartoonjoy
+We're not dependent on an entirely different platform.
+
+{Reactions}
+✅ 
+
+[04/10/2025 16:01] kvarcheats
+are recommended mitigation steps needed? because it is a thing that should be completely rewritten
+
+
+[04/10/2025 16:35] kartoonjoy
+https://discord.com/channels/810916927919620096/810936719003090974/1359582627589394514
+
+
+[04/11/2025 05:54] 0xekkoo
+are the submitted findings readily available for sponsors? or they need to wait before contest ends to access it?
+
+
+[04/11/2025 08:03] cloudellie
+They get access after submissions close.
+
+{Reactions}
+👍 
+
+[04/11/2025 08:24] cloudellie
+HM @🐺Wardens 🔆 
+
+** ‼️ Update re: BitVault submissions access after close**
+The BitVault team has requested that we keep submissions private until they have had time to review them in collaboration with the Liquity team, since they are undergoing an audit concurrently. 
+
+Wardens (including SR wardens) will therefore *not* have access to submissions immediately after the submission deadline.
+
+We will keep wardens apprised of progress here, but we wanted to give you a heads-up as the submission deadline approaches.
+
+{Reactions}
+🔥 (16) 👏 (11) c4services (5) 💜 (4) 
+
+[04/11/2025 08:47] 0xekkoo
+This includes the sponsor?
+
+{Reactions}
+🚫 
+
+[04/11/2025 09:49] audittens
+Do I correctly understand that SR wardens will not have access to submissions as well?
+
+{Reactions}
+👍 
+
+[04/11/2025 11:31] cloudellie
+Yes, that's correct.
+
+{Reactions}
+🎉 
+
+[04/11/2025 11:32] cloudellie
+I've updated my post for clarity
+
+{Reactions}
+👍 
+
+[04/11/2025 17:55] kartoonjoy
+ℹ️ Wardens, you have about 2 hrs till this audit closes. Be sure to submit your findings well in advance of the cutoff. Thanks!
+
+
+[04/11/2025 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **BitVault** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks.
+
+
+[04/11/2025 23:27] kvarcheats
+Are we going to be able to see if our findings are validated or not by the triage
+
+
+[04/11/2025 23:29] kartoonjoy
+https://discord.com/channels/810916927919620096/1356293930391703755/1360168738434846810
+
+
+[04/11/2025 23:42] kvarcheats
+That does not answer my question. I am not asking for anyone elses findings. Im asking if I can see the triage opinion on mine
+
+
+[04/11/2025 23:44] kartoonjoy
+For the time being you won't see any findings, yours or anyone else's. Does that help?
+
+
+[04/23/2025 13:14] d.te
+Just wondering if there are any updates on the submissions or review process
+
+
+[04/27/2025 09:49] joshuajee
+When is the judging resuming on this one"?
+
+
+[04/29/2025 16:55] kartoonjoy
+Wardens, submissions are now visible.
+
+
+[04/29/2025 18:49] 0xdemonnn
+Just want to give an opinion regarding judging on this contest, please check the primary issue and duplicate issue again. For the primary issue, there is an issue with coded PoC but not selected as primary while the primary issue is non-coded PoC. For duplicate, there is an issue that has a completely different root cause but is made into one issue. 
+Thanks. :hi5:
+
+
+[04/29/2025 21:32] franco_btc
+I submitted a medium-severity vulnerability that has three duplicates and is confirmed as valid, but mine is marked as "insufficient" while the other duplicates are marked as "sufficient." What does this mean? Will my vulnerability not be considered?
+
+
+[04/29/2025 22:58] 0xgeee_68136
+hi, i have a question on how the judging works since the ui is very confusing.
+
+
+[04/29/2025 22:59] 0xgeee_68136
+are the status of the reports already final ?
+
+
+[04/29/2025 23:04] 0xgeee_68136
+also who checks the duplications ?
+
+
+[04/30/2025 00:23] kartoonjoy
+Hi there. We're currently in the PJQA phase which means that the statuses are near final pending discussions with SR wardens and the sponsor. The judge is responsible to assigning duplicates.
+
+
+[04/30/2025 00:59] 0xdemonnn
+Hi, what are the criteria for a primary issue to be selected? I am talking about issue [F-74](https://code4rena.com/audits/2025-04-bitvault/submissions/F-74). The current primary issue does not have a coded PoC while there is a duplicate that has a clear coded PoC. Please check again. Thanks.
+
+
+[04/30/2025 01:07] 0xgeee_68136
+so the sponsor initially decides the status of the report ? are we allowed to escalate if we dont agree with the sponsor's decision ?
+
+
+[04/30/2025 01:10] kartoonjoy
+The sponsor weighs in and the judge makes the final decision. Without the SR role, no, you wont be able to escalate.
+
+
+[04/30/2025 01:10] kartoonjoy
+Im not going to speak to specific issues but the judge makes the final determination
+
+
+[04/30/2025 01:11] 0xgeee_68136
+so without escalation, the final judge will be on the sponsor? 🤔
+
+
+[04/30/2025 01:12] kartoonjoy
+The Judge will make the final decision.
+
+
+[04/30/2025 01:13] 0xgeee_68136
+gotcha. what if there are wrong duplicates? i hope the judge will go through all the issues.
+
+{Reactions}
+🤞 
+
+[04/30/2025 09:26] 0xgeee_68136
+may i ask who is the judge for this contest?
+
+
+[05/01/2025 09:24] alexzhang8602
+In F-15,  I noticed the judge's comment.
+ "On reviewing this again in the context of S-195's comments, this really shouldn't be higher than QA given the Centralization Risks rules.". 
+However, I think F-15 is different from S-195, and its severity should actually be higher.
+
+According to the Centralization Risks guidelines: "Reckless admin mistakes are invalid."
+
+But the issue in F-15 isn’t a reckless admin mistake. The protocol never accounted for this scenario, so the admin wouldn't even recognize it as a mistake. That’s why I believe the impact is more serious.
+
+I would appreciate it if you could take another look at F-15.
+
+
+[05/01/2025 11:43] kartoonjoy
+Hi there. Thank you for raising the concern. However, the PJQA period is reserved for SR wardens and has now ended.
+
+https://docs.code4rena.com/competitions/judging-criteria#post-judging-qa-pjqa
+
+
+[05/01/2025 18:58] kartoonjoy
+🤑 🎉  Awards for **BitVault**:
+
+$3,476.38 USDC » @araj
+$3,026.19 USDC » @0xDemon
+$1,850.66 USDC » @gesha17
+$845.69 USDC » @zanderbyte
+$650.53 USDC » @TheSchnilch
+$650.53 USDC » Fortis_audits (@Mahi_Vasisth and @Bluedragon)
+
+🏁 Findings summary
+--------------------------------------—
+0 High risk findings
+2 Med risk findings
+849 wardens participated
+
+Top Hunter: @araj, @0xDemon, and @gesha17
+Top Gatherer: @araj and @0xDemon
+ 
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to [complete your tax reporting info](<https://docs.code4rena.com/awarding/incentive-model-and-awards/awarding-process#tax-information-for-code4rena-contributors-wardens-judges-etc>) if you haven't already. This must be completed within 30 days (i.e. before 05/31/2025) to receive your award distribution for this audit.
+
+{Reactions}
+🎉 (7) 
+
+[05/05/2025 09:03] 0xhiros
+The sponsor agreed that my finding was valid,
+I cannot understand why it was marked as invalid.
+
+{Reactions}
+✅ (2) 
+
+[06/02/2025 21:30] C4
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted 06/11/2025 21:13. Please make sure to grab anything you might need before then.
+
+
+[06/17/2025 19:00] C4
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 88 message(s)
+==============================================================
